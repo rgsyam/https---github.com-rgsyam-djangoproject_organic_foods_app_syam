@@ -1,0 +1,35 @@
+
+.iner {
+    color: #000000;
+    background-color: #81ff7046;
+}
+.blog-meat{
+    background: url(../img/backgrund.png),url(../img/bg-grape-background.png),url(../img/aboutus/bg-aboutus.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.meat {
+    color: #000000;
+}
+
+/* Ensure responsive design */
+.container-xxl {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .meat {
+        bottom: 20px; /* Adjust based on design */
+    }
+
+    .iner {
+        bottom: 20px; /* Adjust based on design */
+    }
+}
+
+/* Remove absolute positioning to prevent layout issues */
+.meat, .meats, .iner {
+    position: relative; /* Change to relative for better responsiveness */
+}

@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "css/login.css" %}">
+    </head>
+<!--bootstrapcss-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--googleFonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <body>
+        
+        <div class="container-xxl py-5 bg-dark login-header mb-5">
+            <div class="container text-center my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">LogIn</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item"><a href="{% url 'home1' %}"style="color: yellow; text-decoration: none;"><b>Home</b></a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">LogIn</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center fadeInUp">
+                    <h5 class="" style="color: white; text-decoration: none;">LogIn</h5>
+                    <h1 class="">LogIn for Booking Products</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="">
+                            <img src="{% static "img/signup.png" %}" class="img-fluid" alt="Sample image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="py-5">
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="form-floating ">
+                                            <input type="text" class="form-control" id="username" name="username" placeholder="User Name">
+                                            <label for="username">User Name</label>
+                                          </div>
+                                          
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="password1" name="password" placeholder="Password" >
+                                            <label for="password">Password</label>
+                                          </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-success w-100 py-3" type="submit">LogIn</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        {% include "footer.html" %}
+        
+      <!--bootstrapjs-->
+<script src="https://kit.fontawesome.com/a3e6ec8cbc.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a3e6ec8cbc.js" crossorigin="anonymous"></script>
+    </body>
+</html>

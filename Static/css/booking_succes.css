@@ -1,0 +1,6 @@
+.booking_susccessfully{
+    background: linear-gradient(rgba(15, 23, 43, 0.541), rgba(15, 23, 43, .9)), url(../img/vegtables.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

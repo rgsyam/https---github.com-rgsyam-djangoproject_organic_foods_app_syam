@@ -1,0 +1,187 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+  </head>
+   <!--bootstrapcss-->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--googleFonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <body>
+
+
+  <!--bootstrap link-->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!--bootstrap link end-->
+
+<div class="container-xxl bg-white p-0">
+  <!-- Spinner Start -->
+
+  <!-- Spinner End -->
+  <!--nav-->
+  {% include "header.html" %}
+
+  <!--carousel-->
+  {% include "carousel.html" %}
+  
+  <div class="container-xxl dtls  "style="background-color: #7ba13eea; color:black">
+    
+      <div class=" row g-5" >
+        <div class=" col-md-3  ">
+          <nav aria-label="">
+            <ol class="breadcrumb justify-content-center ms-auto py-0 pe-4  text-uppercase">
+                <li  class=" "><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                  <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                </svg></li>
+                <li class=" active" style="padding-left: 10px;" class="pare" aria-current="page"><h6 >Free Shipping</h6>
+                  <p>On orders over $99</p></li>
+            </ol>
+        </nav>
+        </div>
+        <div class=" col-md-3 ">
+          <nav aria-label="">
+            <ol class="breadcrumb justify-content-center ms-auto py-0 pe-4  text-uppercase">
+                <li  class=" "><svg xmlns="http://www.w3.org/2000/svg" width="40" height="36" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                </svg></li>
+                <li class=" active" style="padding-left: 10px;"  class="pare" aria-current="page"><h6 >Special Gift Card</h6>
+                  <p>The Perfect Gift Idea</p></li>
+            </ol>
+        </nav>
+        </div>
+        <div class=" col-md-3 ">
+          <nav aria-label="">
+            <ol class="breadcrumb justify-content-center ms-auto py-0 pe-4  text-uppercase">
+                <li  class=" ">          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                  <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg></li>
+                <li class=" active" style="padding-left: 10px;" class="pare" aria-current="page"><h6 >Special Discounts</h6>
+                  <p >Weeky Promotions</p></li>
+            </ol>
+        </nav>
+        </div>
+        <div class=" col-md-3 ">
+          <nav aria-label=" ">
+            <ol class="breadcrumb justify-content-center ms-auto text-uppercase">
+                <li  class=" nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+                  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+                </svg></li>
+                <li class="nav-item active " style="padding-left: 10px;"  class="pare" aria-current="page"><h6 >24/7 Customer Care</h6>
+                  <p >Hours: 8:00 – 20:00 </p></li>
+            </ol>
+        </nav>
+        </div>
+    
+        
+      </div>
+      
+    
+  </div>
+  
+  
+
+
+<!--organic_theme-->
+  <section class="organic" id="organic_theme">
+  {% include "organic_theme.html" %}
+  </section>
+
+  
+
+      <!--food choice-->
+    <section class="food_choice" id="food_choice">
+    {% include "food_choice.html" %}
+    </section>
+
+
+
+    <!--Special_OfFers-->
+  <section class="Special_OfFers" id="Special_OfFers">
+  {% include "Special_Offers.html" %}
+  </section>
+
+    <!--Recipe-->
+  <section class="Recipe" id="Recipe">
+  {% include "recipes.html" %}
+  </section>
+
+<!--our team-->
+  <section class="our_team" id="our_team">
+  {% include "our_team.html" %}
+  </section>
+   <!--blogs_foods-->
+   <section class="blogs_foods" id="blogs_foods">
+    {% include "blogs_foods.html" %}
+    </section>
+
+      <!--subscription-->
+  <section class="subscription" id="subscription">
+  {% include "subscription.html" %}
+  </section>
+
+
+<!--footer-->
+  {% include "footer.html" %}
+
+    
+</div>
+
+    <!--bootstrapjs-->
+<script src="https://kit.fontawesome.com/a3e6ec8cbc.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a3e6ec8cbc.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="{% static 'js/home1.js' %} "></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

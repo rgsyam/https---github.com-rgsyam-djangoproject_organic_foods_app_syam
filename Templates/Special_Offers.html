@@ -1,0 +1,110 @@
+{% load static %}
+<!--link tage-->
+<link rel="stylesheet" href="{% static "css/special_Offers.css" %}">
+<!---->
+<div class="container-xxl offer-head py-5">
+    <div class="container ">
+        <div class="heading text-center mb-5"><h2 style="color: #2e4914;">Special Offers</h2></div>
+        <div class="tab-class text-center mb-5 ">
+            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                <li class="nav-item">
+                    <a class="d-flex align-items-center text-sttar mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                        <div class="ps-3">
+                            
+                            <h6 class="mt-n1 btn btn-outline-success mb-0">All offers</h6>
+                        </div>
+                    </a>
+                </li>   
+                <li class="nav-item">
+                    <a class="d-flex  align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                        <div class="ps-3">
+                            
+                            <h6 class="mt-n1 btn btn-outline-success  mb-0 "> Fruits</h6>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                        <div class="ps-3">
+                            
+                            <h6 class="mt-n1 btn btn-outline-success  mb-0"> Vegetables</h6>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!--All offers-->
+                {% if user.is_authenticated %}
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        {% for item in all_offer_items %}
+                        <div class="card col-lg-4 col-sm-6" >
+                            <div class=" align-items-center">
+                                <div class="p-4">
+                                    <h5 class="mb-3">{{item.title}} </h5>
+                                    <img class="flex-shrink-0 img-fluid rounded mb-1" src="{{ item.image.url }}" alt="{{ item.title }}" style="width: 150px;height:150px">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <p class="fst-italic mb-3">{{ item.description }}</p>
+                                    <h5 class="mb-3" >{{item.rate}} </h5>
+                                    <a href="{% url "product" %}" class="btn btn-success mb-3">Buy Now</a>
+                                  
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        {% empty %}
+                        <h3>No bookings yet</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!--Fruits-->
+                <div id="tab-2" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        {% for item in fruits_items %}
+                        <div class="card col-lg-4 col-sm-6">
+                            <div class="align-items-center">
+                                <div class=" p-4">
+                                    <h5 class="mb-3">{{item.title}} </h5>
+                                    <img class="flex-shrink-0 img-fluid rounded mb-1" src="{{ item.image.url }}" alt="{{ item.title }}" style="width: 150px;height:150px">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <p class="fst-italic">{{ item.description }}</p>
+                                    <h5 class="mb-3" >{{item.rate}} </h5>
+                                    <a href="{% url "product" %}" class="btn btn-success mb-3">Buy Now</a>
+                                 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!--Vegatables-->
+                <div id="tab-3" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                   
+                        {% for item in vegatables_items %}
+                       <div class="card col-lg-4 col-sm-6">
+                          <div class=" align-items-center">
+                            <div class=" p-4">
+                                <h5 class="mb-3" >{{item.title}} </h5>
+                                <img class="flex-shrink-0 img-fluid rounded mb-1" src="{{ item.image.url }}" alt="{{ item.title }}" style="width: 150px;height:150px">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                <p class="fst-italic">{{ item.description }}</p>
+                                <h5 class="mb-3" >{{item.rate}} </h5>
+                                <a href="{% url "product" %}" class="btn btn-success mb-3">Buy Now</a>
+                                </div>
+                            </div>
+                          </div>
+                       </div>
+                       {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class=" text-center ">
+            <a href="{% url "product"  %}" class="btn btn-outline-success  ">  VISIT STORE  </a>
+        </div>
+        {% endif %}
+    </div>  
+</div>

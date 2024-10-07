@@ -1,0 +1,6 @@
+.login-header{
+    background: linear-gradient(rgba(39, 43, 53, 0.801), rgba(20, 25, 37, 0.849)), url(../img/successfull.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

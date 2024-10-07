@@ -1,0 +1,77 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/blogs_foods.css' %}">
+
+<div class="container-xxl blog-meat py-5">
+  <div class="container  ">
+    <div class="row g-2 " >
+      <div class="col-lg-6 col-md-12 border " >
+        <div class="row g-2">
+          <div class="col-12">
+            <img src="{% static 'img/meat.jpg' %}" class="d-block w-100  img-fluid" alt="Fresh meat">
+            <div class="p-3 ">
+              <div class="row g-3 py-5">
+                <div class="col-6">
+                  <p class="meat" style=" color: black;">Deliciously fresh</p>
+                  <h3 style=" color: black;">Meats</h3>
+                </div>
+                <div class="col-6 ">
+                  <div class="container-xxl  ">
+                    <div class="container text-center my-3 pt-53 pb-2">
+                      {% if user.is_authenticated %}
+                      <a href="{% url "product" %}"><span class="btn btn-outline-success">SHOP</span></a>
+                    {% endif %}
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  " >
+            <img src="{% static 'img/vegtables.jpg' %}" class="d-block w-100 img-fluid" alt="Organic vegetables">
+            <div class="p-2 ">
+              <div class="row g-3 py-5">
+                <div class="col-6">
+                  <p class="meat " style=" color: black;">Organic and freshly picked</p>
+                  <h3 style=" color: black;">Vegetables</h3>
+                </div>
+                <div class="col-6 ">
+                  <div class="container-xxl  ">
+                  <div class="container text-center my-3 pt-53 pb-2">
+                    {% if user.is_authenticated %}
+                      <a href="{% url "product" %}"><span class="btn btn-outline-success">SHOP</span></a>
+                    {% endif %}
+
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 border"   >
+        <img src="{% static 'img/blog.jpg' %}" class="img-fluid" alt="Blog image">
+        <div class="p-3 ">
+          <div class="row g-3 py-5" >
+            <div class="col-6 ">
+              <p style=" color: black;">Blog</p>
+              <h3 style=" color: black;">Tasty</h3>
+            </div>
+            <div class="col-6">
+              <p style="font-size: 0.875em; color: black;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue ex urna. 
+                In porttitor non ex et dictum. Pellentesque habitant morbi tristique senectus et netus 
+                et malesuada fames ac turpis egestas. Curabitur nisl leo, fermentum non posuere ... 
+                <a href="#" style="color: black;text-decoration: none;"><span>More</span></a>...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

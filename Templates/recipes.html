@@ -1,0 +1,30 @@
+{% load static %}
+
+
+<!--link-->
+<link rel="stylesheet" href="{% static "css/recipes.css" %}">
+
+<div class="container-xxl Recipe-background py-5 mb-5">
+    <div class="container my-5 pt-5 pb-4">
+        <div class=" mb-3">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="card-body">
+                        <h2 class="card-title" style=" color: black;">Recipes</h2>
+                        <p class="card-text" style=" color: black;">Mauris id ipsum et magna egestas volutpat in ac neque.<br>
+                            Phasellus sit amet risus sit amet elit ultrices rutrum.<br>
+                            Proin vel gravida risus, mollis egestas velit.</p>
+                            <div class=" text ">
+                                <a href="#" class="btn btn-outline-success  ">  VIEW RECIPES  </a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                   
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="{% static 'img/recipes/recipe.png' %}">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.Special_OfFers .card{
+    transition: 0.3s;
+}
+.Special_OfFers .card:hover{
+    border: 1px solid rgb(87, 161, 52);
+    
+}
+.offer-head{
+    background: linear-gradient(rgba(85, 90, 102, 0.342), rgba(46, 57, 85, 0.555)), url(../img/bg-grape-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}

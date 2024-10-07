@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "css/show_order.css" %}">
+    </head>
+         <!--bootstrapcss-->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--googleFonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <body>
+<!--nav-->
+<div class="container-xxl py-5 bg-dark kart-head mb-5 ">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 ">MY KART</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li  class="breadcrumb-item "> <a href="{% url "home1" %}" style="color: yellow; text-decoration: none;"><b>Home</b></a></li>
+                <li  class="breadcrumb-item text-white"><b>My Kart</b></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!--content-->
+<div class="container-xxl kart-background ">
+    <div class="container   mb-5">
+        <div class="text-center text-uppercase py-5  mb-5">
+            <h1 class="text-success">Your Bookings</h1>
+        </div>
+        
+        <div class="">
+            <div class="row g-4">
+                {% for booking in bookings %}
+                <div class="card col-lg-4 col-sm-6">
+                    <div class="align-items-center">
+                        <div class=" p-4">
+                            <div class="text-center  w-100  flex-column text-start ps-4">
+                                <img class="flex-shrink-0 img-fluid rounded mb-3 " src="{{ booking.product.img.url }}" alt="{{ booking.product.product_name }}" style="width: 150px;height:150px">
+                            </div>
+                           
+                            <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h4 class="fst-italic">{{ booking.product.product_name }}</h4>
+                            <p class="fst-italic">Quantity: {{ booking.quantity }} </p>
+                            <p class="fst-italic">Address: {{ booking.address }}</p>
+                            <p class="fst-italic">Mobile: {{ booking.mobile }} </p>
+                            <p class="fst-italic">Booking Date: {{ booking.booking_date }}  </p>
+                            <h5 class="mb-3" >Order Date: {{ booking.order_date }} </h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="button py-4 text-center">
+            <a href="{% url "product" %}" class="btn btn-success">Back to Products</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+        <!--footer-->
+{% include "footer.html" %}
+
+        <!--bootstrapjs-->
+        <script src="https://kit.fontawesome.com/a3e6ec8cbc.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a3e6ec8cbc.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+.aboutus-head{
+    background: linear-gradient(rgba(15, 23, 43, 0.541), rgba(15, 23, 43, .9)), url(../img/blog.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutus-background{
+    background: url(../img/aboutus/bg-aboutus.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

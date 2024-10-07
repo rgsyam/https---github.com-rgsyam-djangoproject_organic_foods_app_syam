@@ -1,0 +1,23 @@
+{% load static %}
+<!--link-->
+<link rel="stylesheet" href="{% static "css/subscription.css" %}">
+
+<div class="container-xxl subscription-background py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1 class="mb-4" style="font-family:'Sofia';"> <b>Get the Latest News and offers</b></h1>
+        </div>
+        <div class="box text-center" style=" max-width: 500px;margin: 0 auto;">
+            <form method="POST" action="#subscription">
+               {% csrf_token %}
+                <div class="form-floating mb-4">
+                   <input type="email" class="form-control" id="email" placeholder="Your Email" style="border-radius: 20px ; border: 2px solid green" name="email" required>
+                   <label for="email">Your Email</label>
+                </div>
+                <div class="mb-4">
+                <button class="btn-outline-success  w-10 py-3"style="border-radius: 20px ; border: 2px solid green" type="submit">SUBSCRIBE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
